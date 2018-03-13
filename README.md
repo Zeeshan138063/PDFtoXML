@@ -29,7 +29,7 @@ This eliminates the need to manually type in the order data by hand.
 - Navigate to:
 	pdftoxml\\Order_Input\\
 	
-- and run the following in the terminal:
+- Run the following in the terminal:
 		$ python input.py
 		
 - The .xml files created will be saved to pdftoxml\\Order_Input\\xml\\filename.xml
