@@ -59,6 +59,8 @@ def get_start_time(daypart_program):
 
     if "p" in daypart_program.split("-")[0] and "12:" not in daypart_program.split("-")[0]:
         hour += 12
+    elif "a" in daypart_program.split("-")[0] and "12:" in daypart_program.split("-")[0]:
+        hour = 0
     st = time(hour,minute)
     StartTime = st.strftime("%H:%M")
 
@@ -73,6 +75,10 @@ def get_end_time(daypart_program):
     else:
         if "p" in daypart_program.split("-")[1] and "12:" not in daypart_program.split("-")[1]:
             hour += 12
+        elif "a" in daypart_program.split("-")[1] and "12:" in daypart_program.split("-")[1]:
+            hour = 0
+            #import pdb; pdb.set_trace()
+            #print(daypart_program.split("-")[1])
         et = time(hour,minute)
         EndTime = et.strftime("%H:%M")
 
