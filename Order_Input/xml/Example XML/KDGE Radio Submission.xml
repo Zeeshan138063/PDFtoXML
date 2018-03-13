@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="us-ascii" standalone="yes"?>
+<Transmission xmlns:rdo="http://www.AAAA.org/schemas/spotRadio" xmlns:gbl="http://www.AAAA.org/schemas/global" xmlns:hdr="http://www.AAAA.org/schemas/header" xmlns:brd="http://www.AAAA.org/schemas/broadcast" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.AAAA.org/schemas/spotRadioOrder">
+	<hdr:TransmissionHeader>
+		<hdr:UniversalID>
+		</hdr:UniversalID>
+		<hdr:TransmissionNumber>1</hdr:TransmissionNumber>
+		<hdr:TransmissionDateTime>2018-01-24T14:23:12</hdr:TransmissionDateTime>
+		<hdr:ValidatingSchema>http://www.AAAA.org/schemas/spotRadioOrder</hdr:ValidatingSchema>
+		<hdr:ValidatingSchemaVersion>0.2j.2</hdr:ValidatingSchemaVersion>
+		<hdr:Sender companyIndex="1">
+		</hdr:Sender>
+		<hdr:Receiver companyIndex="3">
+		</hdr:Receiver>
+		<gbl:MediaType>spotRadio</gbl:MediaType>
+		<hdr:TransactionType>Order</hdr:TransactionType>
+	</hdr:TransmissionHeader>
+	<Transaction>
+		<hdr:TransactionHeader>
+			<hdr:FlightDates>
+				<hdr:StartDate>2018-01-29</hdr:StartDate>
+				<hdr:EndDate>2018-05-13</hdr:EndDate>
+			</hdr:FlightDates>
+			<hdr:Company>
+				<hdr:Name>58,67</hdr:Name>
+			</hdr:Company>
+			<hdr:Company>
+				<hdr:Name>Ad Results Media</hdr:Name>
+			</hdr:Company>
+			<hdr:Advertiser>
+				<hdr:Name></hdr:Name>
+			</hdr:Advertiser>
+			<hdr:Product>
+				<hdr:Name></hdr:Name>
+			</hdr:Product>
+			<hdr:Estimate>
+				<hdr:Description></hdr:Description>
+			</hdr:Estimate>
+			<hdr:Demo indexKey="1">
+				<hdr:DemoName>Adults 18+</hdr:DemoName>
+				<hdr:Group>Adults</hdr:Group>
+				<hdr:AgeFrom>18</hdr:AgeFrom>
+				<hdr:AgeTo>99</hdr:AgeTo>
+			</hdr:Demo>
+			<hdr:Book indexKey="1">
+				<hdr:BookName>3BK Oct17-Dec17 MSA</hdr:BookName>
+				<hdr:RatingService>PPM</hdr:RatingService>
+				<hdr:Geography>ARB</hdr:Geography>
+				<gbl:Comment owner="Other" description="Book_ String">
+					<gbl:CommentLine>3BK Oct17-Dec17 MSA ARB PPM</gbl:CommentLine>
+				</gbl:Comment>
+			</hdr:Book>
+		</hdr:TransactionHeader>
+		<Campaign>
+			<Order>
+				<brd:OrderStatus>New</brd:OrderStatus>
+				<OrderStartDate>2018-01-29</OrderStartDate>
+				<OrderEndDate>2018-05-13</OrderEndDate>
+				<brd:WeekStartDay>1</brd:WeekStartDay>
+				<brd:BuyType>weekly</brd:BuyType>
+				<brd:Market>
+					<brd:MarketName>Dallas-Ft. Worth</brd:MarketName>
+				</brd:Market>
+				<BookIndex>1</BookIndex>
+				<StationOrder stationOrderID="0" version="1" revision="0" unwired="N">
+					<rdo:Station>
+						<rdo:StationName>KDGE-FM</rdo:StationName>
+						<gbl:ID>
+							<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+								<gbl:CommentLine>[31490871|C]</gbl:CommentLine>
+							</gbl:Comment>
+							<gbl:Code owner="Other" ownerDescription="STRATA" description="spec">fc</gbl:Code>
+						</gbl:ID>
+						<rdo:Band>FM</rdo:Band>
+					</rdo:Station>
+					<Populations demoIndex="1">5414700</Populations>
+					<BuyLine action="Add" tradeFlag="Cash">
+						<UniversalBuyLineID>0</UniversalBuyLineID>
+						<Program></Program>
+						<SpotLength>60</SpotLength>
+						<brd:Daypart>
+							<brd:DaypartCode owner="Other">AM</brd:DaypartCode>
+						</brd:Daypart>
+						<brd:DayTime>
+							<brd:StartTime>06:00</brd:StartTime>
+							<brd:EndTime>10:00</brd:EndTime>
+							<brd:DaysOfWeek>
+								<brd:Monday>Y</brd:Monday>
+								<brd:Tuesday>N</brd:Tuesday>
+								<brd:Wednesday>N</brd:Wednesday>
+								<brd:Thursday>N</brd:Thursday>
+								<brd:Friday>N</brd:Friday>
+								<brd:Saturday>N</brd:Saturday>
+								<brd:Sunday>N</brd:Sunday>
+							</brd:DaysOfWeek>
+						</brd:DayTime>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-01-29</brd:StartDate>
+							<brd:EndDate>2018-02-04</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-05</brd:StartDate>
+							<brd:EndDate>2018-02-11</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-12</brd:StartDate>
+							<brd:EndDate>2018-02-18</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">3</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-19</brd:StartDate>
+							<brd:EndDate>2018-02-25</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-26</brd:StartDate>
+							<brd:EndDate>2018-03-04</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-05</brd:StartDate>
+							<brd:EndDate>2018-03-11</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-12</brd:StartDate>
+							<brd:EndDate>2018-03-18</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-19</brd:StartDate>
+							<brd:EndDate>2018-03-25</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-26</brd:StartDate>
+							<brd:EndDate>2018-04-01</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-02</brd:StartDate>
+							<brd:EndDate>2018-04-08</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-09</brd:StartDate>
+							<brd:EndDate>2018-04-15</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-16</brd:StartDate>
+							<brd:EndDate>2018-04-22</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-23</brd:StartDate>
+							<brd:EndDate>2018-04-29</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-30</brd:StartDate>
+							<brd:EndDate>2018-05-06</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-05-07</brd:StartDate>
+							<brd:EndDate>2018-05-13</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="N" We="N" Th="N" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<DemoValues demoIndex="1">
+							<brd:Rating>0.2</brd:Rating>
+							<brd:Impressions>12100</brd:Impressions>
+							<brd:CPP>1550.00</brd:CPP>
+							<brd:CPM>25.62</brd:CPM>
+						</DemoValues>
+						<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+							<gbl:CommentLine>Josh Hart</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="2" owner="Other" ownerDescription="STRATA" description="SRC">
+							<gbl:CommentLine>TP</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="3" owner="Other" ownerDescription="STRATA" description="Item#">
+							<gbl:CommentLine></gbl:CommentLine>
+						</gbl:Comment>
+					</BuyLine>
+					<BuyLine action="Add" tradeFlag="Cash">
+						<UniversalBuyLineID>0</UniversalBuyLineID>
+						<Program></Program>
+						<SpotLength>60</SpotLength>
+						<brd:Daypart>
+							<brd:DaypartCode owner="Other">AM</brd:DaypartCode>
+						</brd:Daypart>
+						<brd:DayTime>
+							<brd:StartTime>06:00</brd:StartTime>
+							<brd:EndTime>10:00</brd:EndTime>
+							<brd:DaysOfWeek>
+								<brd:Monday>N</brd:Monday>
+								<brd:Tuesday>Y</brd:Tuesday>
+								<brd:Wednesday>N</brd:Wednesday>
+								<brd:Thursday>N</brd:Thursday>
+								<brd:Friday>N</brd:Friday>
+								<brd:Saturday>N</brd:Saturday>
+								<brd:Sunday>N</brd:Sunday>
+							</brd:DaysOfWeek>
+						</brd:DayTime>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-01-29</brd:StartDate>
+							<brd:EndDate>2018-02-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-05</brd:StartDate>
+							<brd:EndDate>2018-02-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">2</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-12</brd:StartDate>
+							<brd:EndDate>2018-02-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-19</brd:StartDate>
+							<brd:EndDate>2018-02-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-26</brd:StartDate>
+							<brd:EndDate>2018-03-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-05</brd:StartDate>
+							<brd:EndDate>2018-03-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-12</brd:StartDate>
+							<brd:EndDate>2018-03-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-19</brd:StartDate>
+							<brd:EndDate>2018-03-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-26</brd:StartDate>
+							<brd:EndDate>2018-04-01</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-02</brd:StartDate>
+							<brd:EndDate>2018-04-08</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-09</brd:StartDate>
+							<brd:EndDate>2018-04-15</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-16</brd:StartDate>
+							<brd:EndDate>2018-04-22</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-23</brd:StartDate>
+							<brd:EndDate>2018-04-29</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-30</brd:StartDate>
+							<brd:EndDate>2018-05-06</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-05-07</brd:StartDate>
+							<brd:EndDate>2018-05-13</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="Y" We="N" Th="N" Fr="N" Sa="N" Su="N">2</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<DemoValues demoIndex="1">
+							<brd:Rating>0.2</brd:Rating>
+							<brd:Impressions>12100</brd:Impressions>
+							<brd:CPP>1550.00</brd:CPP>
+							<brd:CPM>25.62</brd:CPM>
+						</DemoValues>
+						<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+							<gbl:CommentLine>Josh Hart</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="2" owner="Other" ownerDescription="STRATA" description="SRC">
+							<gbl:CommentLine>TP</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="3" owner="Other" ownerDescription="STRATA" description="Item#">
+							<gbl:CommentLine></gbl:CommentLine>
+						</gbl:Comment>
+					</BuyLine>
+					<BuyLine action="Add" tradeFlag="Cash">
+						<UniversalBuyLineID>0</UniversalBuyLineID>
+						<Program></Program>
+						<SpotLength>60</SpotLength>
+						<brd:Daypart>
+							<brd:DaypartCode owner="Other">AM</brd:DaypartCode>
+						</brd:Daypart>
+						<brd:DayTime>
+							<brd:StartTime>06:00</brd:StartTime>
+							<brd:EndTime>10:00</brd:EndTime>
+							<brd:DaysOfWeek>
+								<brd:Monday>N</brd:Monday>
+								<brd:Tuesday>N</brd:Tuesday>
+								<brd:Wednesday>Y</brd:Wednesday>
+								<brd:Thursday>N</brd:Thursday>
+								<brd:Friday>N</brd:Friday>
+								<brd:Saturday>N</brd:Saturday>
+								<brd:Sunday>N</brd:Sunday>
+							</brd:DaysOfWeek>
+						</brd:DayTime>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-01-29</brd:StartDate>
+							<brd:EndDate>2018-02-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-05</brd:StartDate>
+							<brd:EndDate>2018-02-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">2</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-12</brd:StartDate>
+							<brd:EndDate>2018-02-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-19</brd:StartDate>
+							<brd:EndDate>2018-02-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-26</brd:StartDate>
+							<brd:EndDate>2018-03-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-05</brd:StartDate>
+							<brd:EndDate>2018-03-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-12</brd:StartDate>
+							<brd:EndDate>2018-03-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-19</brd:StartDate>
+							<brd:EndDate>2018-03-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-26</brd:StartDate>
+							<brd:EndDate>2018-04-01</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-02</brd:StartDate>
+							<brd:EndDate>2018-04-08</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-09</brd:StartDate>
+							<brd:EndDate>2018-04-15</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-16</brd:StartDate>
+							<brd:EndDate>2018-04-22</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-23</brd:StartDate>
+							<brd:EndDate>2018-04-29</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-30</brd:StartDate>
+							<brd:EndDate>2018-05-06</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-05-07</brd:StartDate>
+							<brd:EndDate>2018-05-13</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="Y" Th="N" Fr="N" Sa="N" Su="N">3</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<DemoValues demoIndex="1">
+							<brd:Rating>0.2</brd:Rating>
+							<brd:Impressions>12100</brd:Impressions>
+							<brd:CPP>1550.00</brd:CPP>
+							<brd:CPM>25.62</brd:CPM>
+						</DemoValues>
+						<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+							<gbl:CommentLine>Josh Hart</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="2" owner="Other" ownerDescription="STRATA" description="SRC">
+							<gbl:CommentLine>TP</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="3" owner="Other" ownerDescription="STRATA" description="Item#">
+							<gbl:CommentLine></gbl:CommentLine>
+						</gbl:Comment>
+					</BuyLine>
+					<BuyLine action="Add" tradeFlag="Cash">
+						<UniversalBuyLineID>0</UniversalBuyLineID>
+						<Program></Program>
+						<SpotLength>60</SpotLength>
+						<brd:Daypart>
+							<brd:DaypartCode owner="Other">AM</brd:DaypartCode>
+						</brd:Daypart>
+						<brd:DayTime>
+							<brd:StartTime>06:00</brd:StartTime>
+							<brd:EndTime>10:00</brd:EndTime>
+							<brd:DaysOfWeek>
+								<brd:Monday>N</brd:Monday>
+								<brd:Tuesday>N</brd:Tuesday>
+								<brd:Wednesday>N</brd:Wednesday>
+								<brd:Thursday>Y</brd:Thursday>
+								<brd:Friday>N</brd:Friday>
+								<brd:Saturday>N</brd:Saturday>
+								<brd:Sunday>N</brd:Sunday>
+							</brd:DaysOfWeek>
+						</brd:DayTime>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-01-29</brd:StartDate>
+							<brd:EndDate>2018-02-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-05</brd:StartDate>
+							<brd:EndDate>2018-02-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">3</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-12</brd:StartDate>
+							<brd:EndDate>2018-02-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-19</brd:StartDate>
+							<brd:EndDate>2018-02-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-26</brd:StartDate>
+							<brd:EndDate>2018-03-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-05</brd:StartDate>
+							<brd:EndDate>2018-03-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-12</brd:StartDate>
+							<brd:EndDate>2018-03-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-19</brd:StartDate>
+							<brd:EndDate>2018-03-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-26</brd:StartDate>
+							<brd:EndDate>2018-04-01</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-02</brd:StartDate>
+							<brd:EndDate>2018-04-08</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-09</brd:StartDate>
+							<brd:EndDate>2018-04-15</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-16</brd:StartDate>
+							<brd:EndDate>2018-04-22</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-23</brd:StartDate>
+							<brd:EndDate>2018-04-29</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-30</brd:StartDate>
+							<brd:EndDate>2018-05-06</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">2</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-05-07</brd:StartDate>
+							<brd:EndDate>2018-05-13</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="Y" Fr="N" Sa="N" Su="N">3</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<DemoValues demoIndex="1">
+							<brd:Rating>0.2</brd:Rating>
+							<brd:Impressions>12100</brd:Impressions>
+							<brd:CPP>1550.00</brd:CPP>
+							<brd:CPM>25.62</brd:CPM>
+						</DemoValues>
+						<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+							<gbl:CommentLine>Josh Hart</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="2" owner="Other" ownerDescription="STRATA" description="SRC">
+							<gbl:CommentLine>TP</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="3" owner="Other" ownerDescription="STRATA" description="Item#">
+							<gbl:CommentLine></gbl:CommentLine>
+						</gbl:Comment>
+					</BuyLine>
+					<BuyLine action="Add" tradeFlag="Cash">
+						<UniversalBuyLineID>0</UniversalBuyLineID>
+						<Program></Program>
+						<SpotLength>60</SpotLength>
+						<brd:Daypart>
+							<brd:DaypartCode owner="Other">AM</brd:DaypartCode>
+						</brd:Daypart>
+						<brd:DayTime>
+							<brd:StartTime>06:00</brd:StartTime>
+							<brd:EndTime>10:00</brd:EndTime>
+							<brd:DaysOfWeek>
+								<brd:Monday>N</brd:Monday>
+								<brd:Tuesday>N</brd:Tuesday>
+								<brd:Wednesday>N</brd:Wednesday>
+								<brd:Thursday>N</brd:Thursday>
+								<brd:Friday>Y</brd:Friday>
+								<brd:Saturday>N</brd:Saturday>
+								<brd:Sunday>N</brd:Sunday>
+							</brd:DaysOfWeek>
+						</brd:DayTime>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-01-29</brd:StartDate>
+							<brd:EndDate>2018-02-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">1</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-05</brd:StartDate>
+							<brd:EndDate>2018-02-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">3</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-12</brd:StartDate>
+							<brd:EndDate>2018-02-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-19</brd:StartDate>
+							<brd:EndDate>2018-02-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-26</brd:StartDate>
+							<brd:EndDate>2018-03-04</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-05</brd:StartDate>
+							<brd:EndDate>2018-03-11</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-12</brd:StartDate>
+							<brd:EndDate>2018-03-18</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-19</brd:StartDate>
+							<brd:EndDate>2018-03-25</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-26</brd:StartDate>
+							<brd:EndDate>2018-04-01</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-02</brd:StartDate>
+							<brd:EndDate>2018-04-08</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-09</brd:StartDate>
+							<brd:EndDate>2018-04-15</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-16</brd:StartDate>
+							<brd:EndDate>2018-04-22</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-23</brd:StartDate>
+							<brd:EndDate>2018-04-29</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-30</brd:StartDate>
+							<brd:EndDate>2018-05-06</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">2</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-05-07</brd:StartDate>
+							<brd:EndDate>2018-05-13</brd:EndDate>
+							<brd:SpotQuantity Mo="N" Tu="N" We="N" Th="N" Fr="Y" Sa="N" Su="N">0</brd:SpotQuantity>
+							<brd:UnitRate>310.00</brd:UnitRate>
+						</brd:AirPeriod>
+						<DemoValues demoIndex="1">
+							<brd:Rating>0.2</brd:Rating>
+							<brd:Impressions>12100</brd:Impressions>
+							<brd:CPP>1550.00</brd:CPP>
+							<brd:CPM>25.62</brd:CPM>
+						</DemoValues>
+						<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+							<gbl:CommentLine>Josh Hart</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="2" owner="Other" ownerDescription="STRATA" description="SRC">
+							<gbl:CommentLine>TP</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="3" owner="Other" ownerDescription="STRATA" description="Item#">
+							<gbl:CommentLine></gbl:CommentLine>
+						</gbl:Comment>
+					</BuyLine>
+					<BuyLine action="Add" tradeFlag="Cash">
+						<UniversalBuyLineID>0</UniversalBuyLineID>
+						<Program></Program>
+						<SpotLength>60</SpotLength>
+						<brd:Daypart>
+							<brd:DaypartCode owner="Other">AM</brd:DaypartCode>
+						</brd:Daypart>
+						<brd:DayTime>
+							<brd:StartTime>06:00</brd:StartTime>
+							<brd:EndTime>29:59</brd:EndTime>
+							<brd:DaysOfWeek>
+								<brd:Monday>Y</brd:Monday>
+								<brd:Tuesday>Y</brd:Tuesday>
+								<brd:Wednesday>Y</brd:Wednesday>
+								<brd:Thursday>Y</brd:Thursday>
+								<brd:Friday>Y</brd:Friday>
+								<brd:Saturday>Y</brd:Saturday>
+								<brd:Sunday>Y</brd:Sunday>
+							</brd:DaysOfWeek>
+						</brd:DayTime>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-01-29</brd:StartDate>
+							<brd:EndDate>2018-02-04</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">1</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-05</brd:StartDate>
+							<brd:EndDate>2018-02-11</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">1</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-12</brd:StartDate>
+							<brd:EndDate>2018-02-18</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">1</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-19</brd:StartDate>
+							<brd:EndDate>2018-02-25</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-02-26</brd:StartDate>
+							<brd:EndDate>2018-03-04</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-05</brd:StartDate>
+							<brd:EndDate>2018-03-11</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-12</brd:StartDate>
+							<brd:EndDate>2018-03-18</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-19</brd:StartDate>
+							<brd:EndDate>2018-03-25</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-03-26</brd:StartDate>
+							<brd:EndDate>2018-04-01</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-02</brd:StartDate>
+							<brd:EndDate>2018-04-08</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-09</brd:StartDate>
+							<brd:EndDate>2018-04-15</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-16</brd:StartDate>
+							<brd:EndDate>2018-04-22</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-23</brd:StartDate>
+							<brd:EndDate>2018-04-29</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">0</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-04-30</brd:StartDate>
+							<brd:EndDate>2018-05-06</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">1</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<brd:AirPeriod hiatus="N">
+							<brd:StartDate>2018-05-07</brd:StartDate>
+							<brd:EndDate>2018-05-13</brd:EndDate>
+							<brd:SpotQuantity Mo="Y" Tu="Y" We="Y" Th="Y" Fr="Y" Sa="Y" Su="Y">1</brd:SpotQuantity>
+							<brd:UnitRate>205.88</brd:UnitRate>
+						</brd:AirPeriod>
+						<DemoValues demoIndex="1">
+							<brd:Rating>0.2</brd:Rating>
+							<brd:Impressions>11100</brd:Impressions>
+							<brd:CPP>1029.00</brd:CPP>
+							<brd:CPM>18.55</brd:CPM>
+						</DemoValues>
+						<gbl:Comment groupID="1" owner="Other" ownerDescription="STRATA" description="memo">
+							<gbl:CommentLine>Josh Hart Talent Fee</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="2" owner="Other" ownerDescription="STRATA" description="SRC">
+							<gbl:CommentLine>TP</gbl:CommentLine>
+						</gbl:Comment>
+						<gbl:Comment groupID="3" owner="Other" ownerDescription="STRATA" description="Item#">
+							<gbl:CommentLine></gbl:CommentLine>
+						</gbl:Comment>
+					</BuyLine>
+				</StationOrder>
+			</Order>
+		</Campaign>
+	</Transaction>
+</Transmission>

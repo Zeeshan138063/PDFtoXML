@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AAAA-Message xmlns:tvb="http://www.AAAA.org/schemas/spotTV" xmlns:tvb-tp="http://www.AAAA.org/schemas/TVBGeneralTypes" xmlns="http://www.AAAA.org/schemas/spotTVCableProposal">
+	<AAAA-Values>
+		<SchemaName>SpotTVCableProposal</SchemaName>
+		<SchemaVersion>0.3.0.5R</SchemaVersion>
+		<Media>SpotRadio</Media>
+		<BusinessObject>Proposal</BusinessObject>
+		<Action>New</Action>
+		<UniqueMessageID>IDARXWCC</UniqueMessageID>
+	</AAAA-Values>
+	<Proposal uniqueIdentifier="N/A" version="1" sendDateTime="2018-01-24T20:25:14" weekStartDay="Mo" startDate="2018-01-29" endDate="2018-05-13">
+		<Seller companyName="N/A">
+			<Salesperson name="N/A"/>
+		</Seller>
+		<Buyer buyingCompanyName="N/A"/>
+		<Advertiser name="N/A">
+			<Product name="N/A"/>
+		</Advertiser>
+		<Name>N/A</Name>
+		<Outlets>
+			<RadioStation callLetters="KDGE" band="FM" outletId="OUT0"/>
+		</Outlets>
+		<AvailList startDate="2018-01-29" endDate="2018-05-13" identifier="AL001" isPackage="N">
+			<Name>Radio Schedule - Dallas-Ft. Worth 3BK Oct17-Dec17 MSA ARB PPM</Name>
+			<OutletReferences>
+				<OutletReference outletFromProposalRef="OUT0" outletForListId="OUL0">
+					<Comment>
+						<tvb-tp:CommentLine></tvb-tp:CommentLine>
+					</Comment>
+				</OutletReference>
+			</OutletReferences>
+			<DemoCategories>
+				<DemoCategory DemoId="DM0">
+					<tvb:DemoType>Rating</tvb:DemoType>
+					<tvb:Group>Adults</tvb:Group>
+					<tvb:AgeFrom>18</tvb:AgeFrom>
+					<tvb:AgeTo>99</tvb:AgeTo>
+				</DemoCategory>
+			</DemoCategories>
+			<TargetDemo demoRef="DM0"/>
+
+        </AvailList>
+    </Proposal>
+</AAAA-Message>
