@@ -18,7 +18,7 @@ def main():
             self.pdfReader = pdfReader
 
 
-        #methods    needs to be able to read a pdf object (inherits from PyPDF2) - should these steps be done in the class, or in the main program.
+        #methods    needs to be able to read a pdf object (inherits from PyPDF2)
 
         def get_number_of_pages(self):
             number_of_pages = self.pdfReader.numPages
@@ -28,7 +28,7 @@ def main():
         def get_page_text(self): #creates a dictionary 'page_text',reads every page in a file, and sets the key as 'Page {#}' and the value as the string of text
             page_text = {}
 
-            for page_num in range(0,self.get_number_of_pages()): # do I need a self here or not?
+            for page_num in range(0,self.get_number_of_pages()):
                 pageObj = self.pdfReader.getPage(page_num)
                 page_text["Page {}".format(page_num +1)] = pageObj.extractText()
             return page_text
@@ -39,7 +39,7 @@ def main():
             return match
 
         def get_market_name(self):
-            match = re.search(r'(.+)\nDescription',self.get_page_text()['Page 1']).group(1) #there has to be a way to not call get_page_text() on the first page every time. How can I store this in a variable?
+            match = re.search(r'(.+)\nDescription',self.get_page_text()['Page 1']).group(1)
             return match
 
         def get_est_num(self):
@@ -208,10 +208,8 @@ def main():
 
         def __str__(self):
             return self.line_num
-        #---------------------------
 
 
-        #--------------------------- main functions
 
 
     def get_flight_end_date(air_weeks):
@@ -239,7 +237,7 @@ def main():
     pdfFiles.sort(key=str.lower)  # sorted in alphabetical order
 
 
-    order_objs = {} #for each file, create an order object
+    order_objs = {}
     num_of_orders = 0
 
 
@@ -285,12 +283,9 @@ def main():
                 print(current_page.get_daypart_symbols())
                 print(current_page.get_spot_rates())
                 print(current_page.get_spot_durs())
+                print(current_page.text)
                 '''
-                #print(current_page.text)
 
-
-                 # to do: by returning air_weeks[0], we can set this value to StartDate.
-                # by returning (get_flight_end_date(air_weeks[-1]), we can convert this into a datetime object and call  Obj + timedelta(days= 6)
                 b = 0
 
                 for i in current_page.get_line_nums(): # for each line on the page,
@@ -304,13 +299,10 @@ def main():
                     daypart_note = current_page.get_daypart_notes()[b]
                     line_objs["{}-{}-Line {}".format(current_order.__str__(),current_page.__str__(),i)] = Line(line_num, daypart_program, daypart_symbol, spot_rate, spot_dur, spot_count, daypart_note)
                     current_line = "{}-{}-Line {}".format(current_order.__str__(),current_page.__str__(),i)
+
                     b += 1
-
-
-
-
-
                     exemel.create_xml_proposal_line(line_objs[current_line],air_weeks,hiatus_weeks,market_name,file)
+
         print("\nOrder #{}: {}".format(num_of_orders, current_order))
         print("Market Name: {}".format(market_name))
         print("Call Letters: {}".format(call_letters))
@@ -336,8 +328,14 @@ def main():
 
 
 
+if __name__ == "__main__":
+    main()
 
-### could these variable/function calls be placed above class Line and below class Page?
+
+
+
+
+### The variable names / attributes of an object "Line" shown below are examples of the data that gets passed in as arguments to the exemel.create_xml_proposal_line() function.
 '''
 call_letters = 'KDGE-FM'
 air_weeks = ['1/29', '2/5', '2/12', '4/30', '5/7']
@@ -349,15 +347,7 @@ spot_rates = ['$310.00', '$310.00', '$310.00', '$310.00', '$310.00', '$205.88']
 spot_durs = ['60', '60', '60', '60', '60', '60']
 spot_counts = [['0', '1', '3', '0', '1'], ['0', '2', '1', '1', '2'], ['1', '2', '0', '1', '3'], ['1', '3', '0', '2', '3'], ['1', '3', '0', '2', '0'], ['1', '1', '1', '1', '1']]
 daypart_notes = ['Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart Talent Fee']
-###
 
-# Then the below are instantiated and stored as attributes for the class Page? Then, the sub class Line will inherit these attributes from the class Page?
 '''
-#Psuedo code
 
-
-if __name__ == "__main__":
-    main()
-
-#notes
 

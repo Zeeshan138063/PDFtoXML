@@ -1,4 +1,3 @@
-# built in / 3rd party
 import os
 import re
 from lxml import etree as ET
@@ -8,16 +7,8 @@ import collections
 
 def parse_xml(root):
     for child in root.iter():
-        #print(child.tag) #show all the tags in the file
         if child.tag == '{http://www.AAAA.org/schemas/TVBGeneralTypes}CommentLine':
             print(child.text)
-            '''
-            for avail_line_elem in child:
-                print(avail_line_elem.text)
-                if avail_line_elem.tag == '{http://www.AAAA.org/schemas/TVBGeneralTypes}CommentLine':
-                    for  x in avail_line_elem.iter():
-                        print(x)
-            '''
 
 
 def get_formatted_weeks(air_weeks): #returns a list of strings named formatted_weeks
@@ -57,16 +48,20 @@ def convert_SpotLength(spot_dur): #converts spot_dur to proper xml format for el
 
     t = time(0, minutes, seconds)
     SpotLength = t.strftime("%H:%M:%S")
+
     return SpotLength
 
 def get_start_time(daypart_program):
+
     start = re.search(r'\d{1,2}:\d{2}', daypart_program).group(0)
     hour = int(start.split(":")[0])
     minute = int(start.split(":")[1])
+
     if "p" in daypart_program.split("-")[0] and "12:" not in daypart_program.split("-")[0]:
         hour += 12
     st = time(hour,minute)
     StartTime = st.strftime("%H:%M")
+
     return StartTime
 
 def get_end_time(daypart_program):
@@ -78,9 +73,9 @@ def get_end_time(daypart_program):
     else:
         if "p" in daypart_program.split("-")[1] and "12:" not in daypart_program.split("-")[1]:
             hour += 12
-        #import pdb; pdb.set_trace()
         et = time(hour,minute)
         EndTime = et.strftime("%H:%M")
+
     return EndTime
 
 def get_startDate(air_weeks):
@@ -137,12 +132,11 @@ def get_revised_spot_count(air_weeks, spot_count, line_num):
     awks_and_sptc = {}
 
     s_length = len(spot_count)
-    # print("Length of spot count for {} = {}\n".format(line_num,s_length))
     print("Whoops, looks like a human didn't put a '0' where there should be...\t¯\_(ツ)_/¯\n")
 
     get_zero_weeks = input(
         "For line #{}, please type in the week number(s) that contains 0 spots. (ex: 5/7)\n\tuse ',' as a delimiter\n>".format(
-            line_num))  # should be able to
+            line_num))
     for week in air_weeks:
         awks_and_sptc[week] = ""
 
@@ -155,14 +149,14 @@ def get_revised_spot_count(air_weeks, spot_count, line_num):
         i = 0
         for key, value in awks_and_sptc.items():
             if value != "0":
-                # import pdb; pdb.set_trace()
                 awks_and_sptc[key] = spot_count[i]
                 i += 1
+
         if len(spot_count) == len(air_weeks):
             break
+
     for value in awks_and_sptc.values():
         values_list.append(value)
-    #revised_spot_counts.append(values_list)
 
     return values_list
 
@@ -199,13 +193,13 @@ def create_xml_proposal_line(line,air_weeks,hiatus_weeks,market_name,file): #air
 
     Days = ET.SubElement(DayTime, '{http://www.AAAA.org/schemas/spotTVCableProposal}Days')
 
-    Monday = ET.SubElement(Days,'{http://www.AAAA.org/schemas/TVBGeneralTypes}Monday') # == "Y"
-    Tuesday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Tuesday') # == "N"
-    Wednesday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Wednesday') # == "N"
-    Thursday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Thursday') # == "N"
-    Friday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Friday') # == "N"
-    Saturday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Saturday') # == "N"
-    Sunday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Sunday') # == "N"
+    Monday = ET.SubElement(Days,'{http://www.AAAA.org/schemas/TVBGeneralTypes}Monday')
+    Tuesday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Tuesday')
+    Wednesday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Wednesday')
+    Thursday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Thursday')
+    Friday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Friday')
+    Saturday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Saturday')
+    Sunday = ET.SubElement(Days, '{http://www.AAAA.org/schemas/TVBGeneralTypes}Sunday')
 
 
     day_of_week = line.daypart_program.split('  ')[0].strip()
@@ -239,7 +233,7 @@ def create_xml_proposal_line(line,air_weeks,hiatus_weeks,market_name,file): #air
         last_day = lambda x: datetime.strptime(wk.replace('-', ''), "%Y%m%d").date() + timedelta(days=6)
         last_day_string = last_day(wk).strftime("%Y-%m-%d")
 
-        DetailedPeriod = ET.SubElement(Periods, '{http://www.AAAA.org/schemas/spotTVCableProposal}DetailedPeriod',{'startDate':wk,'endDate':last_day_string}) #endDate is showing first, not sure if this is an issue or not
+        DetailedPeriod = ET.SubElement(Periods, '{http://www.AAAA.org/schemas/spotTVCableProposal}DetailedPeriod',{'startDate':wk,'endDate':last_day_string})
         Rate = ET.SubElement(DetailedPeriod, '{http://www.AAAA.org/schemas/spotTVCableProposal}Rate')
         Rate.text = line.spot_rate.replace("$","")
 
@@ -248,12 +242,9 @@ def create_xml_proposal_line(line,air_weeks,hiatus_weeks,market_name,file): #air
                                          '{http://www.AAAA.org/schemas/spotTVCableProposal}SpotsPerWeek')
             SpotsPerWeek.text = spt_c
 
-
-
         DemoValues = ET.SubElement(DetailedPeriod,'{http://www.AAAA.org/schemas/spotTVCableProposal}DemoValues')
         DemoValue = ET.SubElement(DemoValues, '{http://www.AAAA.org/schemas/spotTVCableProposal}DemoValue', {'demoRef':'DM0'})
         DemoValue.text = "0.22"
-
 
 
 def update_proposal_header(air_weeks,call_letters): # for each order in the directory, create a header and write to the file above the order lines
@@ -277,14 +268,9 @@ def update_proposal_header(air_weeks,call_letters): # for each order in the dire
 
 
 
-
-
-
 '''
 def create_radio_spot_order_header(line,air_weeks,hiatus_weeks): # for each order in the directory, create a header and write to the file above the order lines
-    for child in root.iter():
-        if child.tag == '{http://www.AAAA.org/schemas/spotTVCableProposal}AAAA-Message':
-            print(child)
+    # add Radio Spot Order code here
 '''
 
 def write_to_proposal_xml(output_xml_file=".\\xml\\proposal.xml"):
@@ -369,21 +355,3 @@ if __name__ == '__main__':
 
 
 #notes
-'''
-5. Since this will output to one xml file, you will need to generate the appropriate header tags to accommodate for when there are > 1 pdf files. (Will this work for proposal file, or no?) 
-
-                            - maybe look into generating the xml for the spot radio file instead. 
-                            - need to create functions to find the following header info
-                            
-                                Proposal file
-                                    format{ex:/ variable name}
-                                    
-                                    - <Name>Radio Schedule - {market_name} 3BK {Oct17-Dec17 / } MSA ARB PPM</Name>
-                                    
-                                    
-                                Radio Submission File #will this need to include cost per point info?)
-                                    - separate orders by <Order> tag 
-
-
-
-'''
