@@ -8,9 +8,8 @@ This program was created to convert .pdf files containing radio scheduling infor
 This eliminates the need to manually type in the order data by hand.
 
 
-This script does the following:
+This script does the following
 1. Instantiates an object: "Order"  for each .pdf file in pdftoxml\\Orders\\ , which contains associated objects: "Page", and "Line".
-
 2. Parses each file, and identifies relevant bits of text using regular expressions, then stores the text into different object/instance variables (attributes).
 	ex:
 		Line.spot_rate = "60",
