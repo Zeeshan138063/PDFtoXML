@@ -24,14 +24,12 @@ This script does the following:
 ##Directions:
 
 - Navigate to:
-
 	pdftoxml\\Order_Input\\
 	
 - and run the following in the terminal:
-
 		$ python input.py
 		
--The .xml files created will be saved to pdftoxml\\Order_Input\\xml\\filename.xml
+- The .xml files created will be saved to pdftoxml\\Order_Input\\xml\\filename.xml
 
 -Thank you for your time. 
  
