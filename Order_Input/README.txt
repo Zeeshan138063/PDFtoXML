@@ -6,7 +6,7 @@ This eliminates the need to manually type in the order data by hand.
 
 
 This script does the following:
-1. Instantiates an object: "Order"  for each .pdf file in .\\Orders\\ , which contains associated objects: "Page", and "Line".
+1. Instantiates an object: "Order"  for each .pdf file in pdftoxml\\Orders\\ , which contains associated objects: "Page", and "Line".
 
 2. Parses each file, and identifies relevant bits of text using regular expressions, then stores the text into different object/instance variables (attributes).
 	ex:
@@ -17,17 +17,17 @@ This script does the following:
 
 
 Installation:
-- after cloning this repo, run the following within Order_Input\\ to install required third party python modules / dependencies:
+- after cloning this repo, run the following within pdftoxml\\Order_Input\\ to install required third party python modules / dependencies:
 
 	$ pip install .
 
 Directions:
 1. Navigate to:
-	Order_Input\\Order_Input\\
+	pdftoxml\\Order_Input\\
 	
 	and run the following in the terminal:
 
 		$ python input.py
-2. The .xml files created will be saved to Order_Input\\Order_Input\\xml\\filename.xml
+2. The .xml files created will be saved to pdftoxml\\Order_Input\\xml\\filename.xml
 
 -Thank you for your time. 
