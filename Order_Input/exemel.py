@@ -205,7 +205,7 @@ def create_xml_proposal_line(line,air_weeks,hiatus_weeks,market_name,file): #air
     day_of_week = line.daypart_program.split('  ')[0].strip()
     day_dict = {"M":Monday,"Tu":Tuesday,'W':Wednesday,'Th':Thursday,'F':Friday,"Sa":Saturday,'Su':Sunday}
     for key, value in day_dict.items():
-        if key == day_of_week:
+        if key in day_of_week:
             value.text = 'Y'
         elif day_of_week == "MTuWThFSaSu":
             value.text = 'Y'
