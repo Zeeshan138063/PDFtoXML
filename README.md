@@ -16,12 +16,12 @@ This script does the following:
 3. Uses the data stored in these variables to construct and save an XML Proposal File to .\\xml\\ 
 
 
-Installation:
+##Installation:
 - after cloning this repo, run the following within pdftoxml\\Order_Input\\ to install required third party python modules / dependencies:
 
 	$ pip install .
 
-Directions:
+##Directions:
 
 1. Navigate to:
 	pdftoxml\\Order_Input\\
