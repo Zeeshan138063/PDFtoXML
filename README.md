@@ -1,6 +1,9 @@
 Order_Input
 v 1.0.1, 03/12/2018
 
+NOTE
+This is currently only supported on Windows operating systems. Unix support is in progress. Please check back soon.
+
 This program was created to convert .pdf files containing radio scheduling information into .xml files, which can then be imported using our proprietary order scheduling software - Strata VIEW.
 This eliminates the need to manually type in the order data by hand.
 
