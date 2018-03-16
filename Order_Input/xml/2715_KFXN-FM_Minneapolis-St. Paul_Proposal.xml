@@ -8,7 +8,7 @@
     <Action>New</Action>
     <UniqueMessageID>IDARXWCC</UniqueMessageID>
   </AAAA-Values>
-  <Proposal uniqueIdentifier="N/A" version="1" sendDateTime="2018-01-24T20:25:14" weekStartDay="Mo" startDate="2018-03-19" endDate="2018-04-08">
+  <Proposal uniqueIdentifier="N/A" version="1" sendDateTime="2018-01-24T20:25:14" weekStartDay="Mo" startDate="2018-08-27" endDate="2018-10-07">
     <Seller companyName="N/A">
       <Salesperson name="N/A"/>
     </Seller>
@@ -20,7 +20,7 @@
     <Outlets>
       <RadioStation callLetters="KFXN" band="FM" outletId="OUT0"/>
     </Outlets>
-    <AvailList startDate="2018-03-19" endDate="2018-04-08" identifier="AL001" isPackage="N" name="Radio Schedule - Minneapolis-St. Paul 3BK Oct17-Dec17 MSA ARB PPM">
+    <AvailList startDate="2018-08-27" endDate="2018-10-07" identifier="AL001" isPackage="N" name="Radio Schedule - Minneapolis-St. Paul 3BK Oct17-Dec17 MSA ARB PPM">
       <Name>Radio Schedule - Minneapolis-St. Paul 3BK Oct17-Dec17 MSA ARB PPM</Name>
       <OutletReferences>
         <OutletReference outletFromProposalRef="OUT0" outletForListId="OUL0">
@@ -45,51 +45,6 @@
             <StartTime>05:30</StartTime>
             <EndTime>09:00</EndTime>
             <Days>
-              <tvb-tp:Monday>N</tvb-tp:Monday>
-              <tvb-tp:Tuesday>N</tvb-tp:Tuesday>
-              <tvb-tp:Wednesday>N</tvb-tp:Wednesday>
-              <tvb-tp:Thursday>Y</tvb-tp:Thursday>
-              <tvb-tp:Friday>Y</tvb-tp:Friday>
-              <tvb-tp:Saturday>N</tvb-tp:Saturday>
-              <tvb-tp:Sunday>N</tvb-tp:Sunday>
-            </Days>
-          </DayTime>
-        </DayTimes>
-        <DaypartName>AM</DaypartName>
-        <AvailName>ThF 530a-9a</AvailName>
-        <SpotLength>00:01:00</SpotLength>
-        <Comment>
-          <tvb-tp:CommentLine>Chris Hawkey</tvb-tp:CommentLine>
-        </Comment>
-        <Periods>
-          <DetailedPeriod endDate="2018-03-25" startDate="2018-03-19">
-            <Rate>575.00</Rate>
-            <SpotsPerWeek>2</SpotsPerWeek>
-            <DemoValues>
-              <DemoValue demoRef="DM0">0.22</DemoValue>
-            </DemoValues>
-          </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-01" startDate="2018-03-26">
-            <Rate>575.00</Rate>
-            <DemoValues>
-              <DemoValue demoRef="DM0">0.22</DemoValue>
-            </DemoValues>
-          </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-08" startDate="2018-04-02">
-            <Rate>575.00</Rate>
-            <DemoValues>
-              <DemoValue demoRef="DM0">0.22</DemoValue>
-            </DemoValues>
-          </DetailedPeriod>
-        </Periods>
-      </AvailLineWithDetailedPeriods>
-      <AvailLineWithDetailedPeriods>
-        <OutletReference outletFromListRef="OUL0"/>
-        <DayTimes>
-          <DayTime>
-            <StartTime>05:30</StartTime>
-            <EndTime>09:00</EndTime>
-            <Days>
               <tvb-tp:Monday>Y</tvb-tp:Monday>
               <tvb-tp:Tuesday>Y</tvb-tp:Tuesday>
               <tvb-tp:Wednesday>Y</tvb-tp:Wednesday>
@@ -107,20 +62,42 @@
           <tvb-tp:CommentLine>Chris Hawkey</tvb-tp:CommentLine>
         </Comment>
         <Periods>
-          <DetailedPeriod endDate="2018-03-25" startDate="2018-03-19">
-            <Rate>575.00</Rate>
-            <DemoValues>
-              <DemoValue demoRef="DM0">0.22</DemoValue>
-            </DemoValues>
-          </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-01" startDate="2018-03-26">
+          <DetailedPeriod endDate="2018-09-02" startDate="2018-08-27">
             <Rate>575.00</Rate>
             <SpotsPerWeek>4</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
           </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-08" startDate="2018-04-02">
+          <DetailedPeriod endDate="2018-09-09" startDate="2018-09-03">
+            <Rate>575.00</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-16" startDate="2018-09-10">
+            <Rate>575.00</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-23" startDate="2018-09-17">
+            <Rate>575.00</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-30" startDate="2018-09-24">
+            <Rate>575.00</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-10-07" startDate="2018-10-01">
             <Rate>575.00</Rate>
             <SpotsPerWeek>4</SpotsPerWeek>
             <DemoValues>
@@ -153,21 +130,42 @@
           <tvb-tp:CommentLine>Chris Hawkey Talent</tvb-tp:CommentLine>
         </Comment>
         <Periods>
-          <DetailedPeriod endDate="2018-03-25" startDate="2018-03-19">
-            <Rate>88.24</Rate>
-            <SpotsPerWeek>2</SpotsPerWeek>
-            <DemoValues>
-              <DemoValue demoRef="DM0">0.22</DemoValue>
-            </DemoValues>
-          </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-01" startDate="2018-03-26">
+          <DetailedPeriod endDate="2018-09-02" startDate="2018-08-27">
             <Rate>88.24</Rate>
             <SpotsPerWeek>4</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
           </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-08" startDate="2018-04-02">
+          <DetailedPeriod endDate="2018-09-09" startDate="2018-09-03">
+            <Rate>88.24</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-16" startDate="2018-09-10">
+            <Rate>88.24</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-23" startDate="2018-09-17">
+            <Rate>88.24</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-30" startDate="2018-09-24">
+            <Rate>88.24</Rate>
+            <SpotsPerWeek>4</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-10-07" startDate="2018-10-01">
             <Rate>88.24</Rate>
             <SpotsPerWeek>4</SpotsPerWeek>
             <DemoValues>
@@ -200,23 +198,44 @@
           <tvb-tp:CommentLine>Chris Hawkey Rotators</tvb-tp:CommentLine>
         </Comment>
         <Periods>
-          <DetailedPeriod endDate="2018-03-25" startDate="2018-03-19">
+          <DetailedPeriod endDate="2018-09-02" startDate="2018-08-27">
             <Rate>400.00</Rate>
-            <SpotsPerWeek>4</SpotsPerWeek>
+            <SpotsPerWeek>5</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
           </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-01" startDate="2018-03-26">
+          <DetailedPeriod endDate="2018-09-09" startDate="2018-09-03">
             <Rate>400.00</Rate>
-            <SpotsPerWeek>3</SpotsPerWeek>
+            <SpotsPerWeek>5</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
           </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-08" startDate="2018-04-02">
+          <DetailedPeriod endDate="2018-09-16" startDate="2018-09-10">
             <Rate>400.00</Rate>
-            <SpotsPerWeek>4</SpotsPerWeek>
+            <SpotsPerWeek>5</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-23" startDate="2018-09-17">
+            <Rate>400.00</Rate>
+            <SpotsPerWeek>5</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-30" startDate="2018-09-24">
+            <Rate>400.00</Rate>
+            <SpotsPerWeek>5</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-10-07" startDate="2018-10-01">
+            <Rate>400.00</Rate>
+            <SpotsPerWeek>5</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
@@ -247,21 +266,42 @@
           <tvb-tp:CommentLine>Chris Hawkey Added Value</tvb-tp:CommentLine>
         </Comment>
         <Periods>
-          <DetailedPeriod endDate="2018-03-25" startDate="2018-03-19">
+          <DetailedPeriod endDate="2018-09-02" startDate="2018-08-27">
             <Rate>0.00</Rate>
             <SpotsPerWeek>3</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
           </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-01" startDate="2018-03-26">
+          <DetailedPeriod endDate="2018-09-09" startDate="2018-09-03">
             <Rate>0.00</Rate>
             <SpotsPerWeek>3</SpotsPerWeek>
             <DemoValues>
               <DemoValue demoRef="DM0">0.22</DemoValue>
             </DemoValues>
           </DetailedPeriod>
-          <DetailedPeriod endDate="2018-04-08" startDate="2018-04-02">
+          <DetailedPeriod endDate="2018-09-16" startDate="2018-09-10">
+            <Rate>0.00</Rate>
+            <SpotsPerWeek>3</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-23" startDate="2018-09-17">
+            <Rate>0.00</Rate>
+            <SpotsPerWeek>3</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-09-30" startDate="2018-09-24">
+            <Rate>0.00</Rate>
+            <SpotsPerWeek>3</SpotsPerWeek>
+            <DemoValues>
+              <DemoValue demoRef="DM0">0.22</DemoValue>
+            </DemoValues>
+          </DetailedPeriod>
+          <DetailedPeriod endDate="2018-10-07" startDate="2018-10-01">
             <Rate>0.00</Rate>
             <SpotsPerWeek>3</SpotsPerWeek>
             <DemoValues>

@@ -291,7 +291,6 @@ def main():
                 for i in current_page.get_line_nums(): # for each line on the page,
                     line_num = current_page.get_line_nums()[b]
                     daypart_program = current_page.get_daypart_programs()[b]
-                    #import pdb;pdb.set_trace()
                     daypart_symbol = current_page.get_daypart_symbols()[b]
                     spot_rate = current_page.get_spot_rates()[b]
                     spot_dur = current_page.get_spot_durs()[b]
