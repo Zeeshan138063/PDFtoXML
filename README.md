@@ -8,15 +8,15 @@ This program was created to convert .pdf files containing radio scheduling infor
 This eliminates the need to manually type in the order data by hand.
 
 
-This script does the following:
-1. Instantiates an object: "Order"  for each .pdf file in pdftoxml\\Orders\\ , which contains associated objects: "Page", and "Line".
+## What it does:
+- Instantiates an object: "Order"  for each .pdf file in pdftoxml\\Orders\\ , which contains associated objects: "Page", and "Line".
 
-2. Parses each file, and identifies relevant bits of text using regular expressions, then stores the text into different object/instance variables (attributes).
+- Parses each file, and identifies relevant bits of text using regular expressions, then stores the text into different object/instance variables (attributes).
 	ex:
 		Line.spot_rate = "60",
 		Line.daypart_program = " M 6:00a-10:00p
 
-3. Uses the data stored in these variables to construct and save an XML Proposal File to .\\xml\\ 
+- Uses the data stored in these variables to construct and save an XML Proposal File to .\\xml\\ 
 
 
 ##Installation:
@@ -29,7 +29,7 @@ This script does the following:
 - Navigate to:
 	pdftoxml\\Order_Input\\
 	
-- and run the following in the terminal:
+- Run the following in the terminal:
 		$ python input.py
 		
 - The .xml files created will be saved to pdftoxml\\Order_Input\\xml\\filename.xml
