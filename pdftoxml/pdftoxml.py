@@ -5,7 +5,8 @@ import textwrap
 import exemel_utils
 import pdf_parse
 
-
+#---------------------------------
+# Main program functionality
 def main():
     pdfFiles = []
     # for each pdf in the 'Orders' folder, add the filenames to a list pdfFiles.
@@ -100,13 +101,6 @@ def main():
         exemel_utils.root = exemel_utils.dom.getroot()
 
     print("Process complete.")### The variable names / attributes of an object "Line" shown below are examples of the data that gets passed in as arguments to the create_exemel.create_xml_proposal_line() function.
-
-
-
-
-if __name__ == "__main__":
-    main()
-
 '''
 call_letters = 'KDGE-FM'
 air_weeks = ['1/29', '2/5', '2/12', '4/30', '5/7']
@@ -120,3 +114,15 @@ spot_counts = [['0', '1', '3', '0', '1'], ['0', '2', '1', '1', '2'], ['1', '2', 
 daypart_notes = ['Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart Talent Fee']
 
 '''
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    main()

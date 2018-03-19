@@ -4,7 +4,7 @@ v 1.0.1, 03/12/2018
 NOTE
 This is currently only supported on Windows operating systems. Unix support is in progress. Please check back soon.
 
-This program was created to convert .pdf files containing radio scheduling information into .xml files, which can then be imported using our proprietary order scheduling software - Strata VIEW.
+PdftoXml was created to convert .pdf files containing radio scheduling information into .xml files, which can then be imported using iHeart's proprietary order scheduling software - Strata VIEW.
 This eliminates the need to manually type in the order data by hand.
 
 
@@ -20,19 +20,19 @@ This eliminates the need to manually type in the order data by hand.
 
 
 ##Installation:
-- after cloning this repo, run the following within pdftoxml\\Order_Input\\ to install required third party python modules / dependencies:
+- after cloning this repo, run the following within pdftoxml\pdftoxml\\ to install required third party python modules / dependencies:
 
 	$ pip install .
 
 ##Directions:
 
 - Navigate to:
-	pdftoxml\\Order_Input\\
+	pdftoxml\\pdftoxml\\
 	
 - Run the following in the terminal:
 		$ python input.py
 		
-- The .xml files created will be saved to pdftoxml\\Order_Input\\xml\\filename.xml
+- The .xml files created will be saved to pdftoxml\\pdftoxml\\xml\\filename.xml
 
 -Thank you for your time. 
  
