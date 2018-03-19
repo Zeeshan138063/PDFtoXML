@@ -5,8 +5,7 @@ import textwrap
 import exemel_utils
 import pdf_parse
 
-#---------------------------------
-# Main program functionality
+
 def main():
     pdfFiles = []
     # for each pdf in the 'Orders' folder, add the filenames to a list pdfFiles.
