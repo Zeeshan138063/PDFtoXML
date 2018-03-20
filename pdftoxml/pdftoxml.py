@@ -28,12 +28,13 @@ def main():
         order_objs['Order {}'.format(num_of_orders)] = pdf_parse.Order(file,pdfReader) # Order class constructor
 
         current_order = order_objs['Order {}'.format(num_of_orders)] # stores the current order in the loop to a variable
+        page_one_text = current_order.get_page_text()['Page 1']
 
-        call_letters = current_order.get_call_letters()
-        market_name = current_order.get_market_name()
-        est_num = current_order.get_est_num()
-        product_name = current_order.get_product_name()
-        buyer_name = current_order.get_buyer_name()
+        call_letters = pdf_parse.Order.get_call_letters(page_one_text)
+        market_name = pdf_parse.Order.get_market_name(page_one_text)
+        est_num = pdf_parse.Order.get_est_num(page_one_text)
+        product_name = pdf_parse.Order.get_product_name(page_one_text)
+        buyer_name = pdf_parse.Order.get_buyer_name(page_one_text)
 
 
 
@@ -41,20 +42,21 @@ def main():
         page_objs = {}
 
         for page_num, text in current_order.get_page_text().items(): # for each page in the order, create a page object
-            page_objs['{}-{}'.format(current_order,page_num)] = pdf_parse.Page(page_num, text,call_letters,pdfReader) # Page class constructor
+            page_objs['{}-{}'.format(current_order,page_num)] = pdf_parse.Page(page_num, text, call_letters) # Page class constructor
             current_page = page_objs['{}-{}'.format(current_order,page_num)]
 
 
 
             if current_page.page_with_spots() == True: # if the current page contains a schedule with spots, then read it.
                 air_weeks = current_page.get_air_weeks()
-                hiatus_weeks = current_page.get_hiatus_weeks()
+                hiatus_weeks = current_page.get_hiatus_weeks(air_weeks)
+
 
 
                 # for each line, create a line object
                 line_objs = {}
 
-                flight_end_date = pdf_parse.get_flight_end_date(air_weeks)
+                flight_end_date = pdf_parse.Page.get_flight_end_date(air_weeks)
                 exemel_utils.endDate = exemel_utils.get_endDate(air_weeks)
                 exemel_utils.startDate = exemel_utils.get_startDate(air_weeks)
 
@@ -63,8 +65,9 @@ def main():
                 print(current_page.get_daypart_symbols())
                 print(current_page.get_spot_rates())
                 print(current_page.get_spot_durs())
-                print(current_page.text)
                 '''
+                #print(current_page.text)
+
 
                 b = 0
 
@@ -76,7 +79,7 @@ def main():
                     spot_dur = current_page.get_spot_durs()[b]
                     spot_count = current_page.get_spot_counts()[b]
                     daypart_note = current_page.get_daypart_notes()[b]
-                    line_objs["{}-{}-Line {}".format(current_order.__str__(),current_page.__str__(),i)] = pdf_parse.Line(line_num, daypart_program, daypart_symbol, spot_rate, spot_dur, spot_count, daypart_note,text,call_letters,pdfReader)
+                    line_objs["{}-{}-Line {}".format(current_order.__str__(),current_page.__str__(),i)] = pdf_parse.Line(line_num, daypart_program, daypart_symbol, spot_rate, spot_dur, spot_count, daypart_note, page_num, text, call_letters)
                     current_line = "{}-{}-Line {}".format(current_order.__str__(),current_page.__str__(),i)
 
                     b += 1

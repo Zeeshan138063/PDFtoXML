@@ -7,8 +7,6 @@ import textwrap
 import exemel_utils
 
 
-
-
 class Order:
     #should instantiate an Order object. An order object can have a certain number of pages, with each page containing lines (roughly 10 or so per page)
 
@@ -33,25 +31,39 @@ class Order:
             page_text["Page {}".format(page_num +1)] = pageObj.extractText()
         return page_text
 
-    def get_call_letters(self):
-        match = re.search(r'(K|W)\D{2,3}-(F|A)M',self.get_page_text()['Page 1'])
-        match = match.group(0)
+    @staticmethod
+    def get_call_letters(text):
+        match = re.search(r'(K|W)\D{2,3}-(F|A)M',text)
+        if match is not None:
+            match = match.group(0)
         return match
 
-    def get_market_name(self):
-        match = re.search(r'(.+)\nDescription',self.get_page_text()['Page 1']).group(1)
+    @staticmethod
+    def get_market_name(text):
+        match = re.search(r'(.+)\nDescription',text)
+        if match is not None:
+            match = match.group(1)
         return match
 
-    def get_est_num(self):
-        match = re.search(r'Product:\n(\d{4})',self.get_page_text()['Page 1']).group(1)
+    @staticmethod
+    def get_est_num(text):
+        match = re.search(r'Product:\n(\d{4})',text)
+        if match is not None:
+            match = match.group(1)
         return match
 
-    def get_product_name(self):
-        match = re.search(r'(.+)\nProduct:', self.get_page_text()['Page 1']).group(1)
+    @staticmethod
+    def get_product_name(text):
+        match = re.search(r'(.+)\nProduct:', text)
+        if match is not None:
+            match = match.group(1)
         return match
 
-    def get_buyer_name(self):
-        match = re.search(r'(.+)\nBuyer:', self.get_page_text()['Page 1']).group(1)
+    @staticmethod
+    def get_buyer_name(text):
+        match = re.search(r'(.+)\nBuyer:', text)
+        if match is not None:
+            match = match.group(1)
         return match
 
     def __str__(self):
@@ -65,8 +77,7 @@ class Order:
 class Page(Order):
 # needs to instantiate a new Page object for all pages in the order containing relevant schedule info. ex: should be values for spot_counts, spot_rates,
 
-    def __init__(self, page_num, text,call_letters,pdfReader):
-        super().__init__(self,pdfReader)
+    def __init__(self, page_num, text, call_letters):
         self.call_letters = call_letters
         self.page_num = page_num
         self.text = text
@@ -77,14 +88,18 @@ class Page(Order):
 
     def get_air_weeks(self): # returns a list of air weeks.
         air_weeks = []
-        split_1 = self.text.split("\nDur")[1].split(self.call_letters)[0].split("\n")[1:-1]
-        for wk in split_1:
-            air_weeks.append(wk)
-        return air_weeks
+        try:
+            split_1 = self.text.split("\nDur")[1].split(self.call_letters)[0].split("\n")[1:-1]
+            for wk in split_1:
+                air_weeks.append(wk)
+            return air_weeks
+        except IndexError:
+            return IndexError
 
-    def get_hiatus_weeks(self):
+    @staticmethod
+    def get_hiatus_weeks(air_weeks):
         iso_week_nums = []
-        for week in self.get_air_weeks():
+        for week in air_weeks:
             dt = date(2018, int(week.split('/')[0]), int(week.split('/')[1]))
             wk = dt.isocalendar()[1]
             iso_week_nums.append(wk)
@@ -107,16 +122,6 @@ class Page(Order):
             d = d.strftime('%m/%d')
             hiatus_weeks.append(d)
         return hiatus_weeks
-
-
-    def get_week_nums(air_weeks): # returns the index position of the weeks with active flight spots
-        week_dict = {}
-        week = 1
-        for wk in air_weeks:
-            week_dict["Week {}".format(week)] = wk
-            week +=1
-        return week_dict
-
 
     def get_line_nums(self):
         matches = re.findall(r'(\d{1,2})\n.+\s{1,2}\d{1,2}:\d{2}.-\s*\n?\d{1,2}:\d{2}.',self.text)
@@ -172,7 +177,6 @@ class Page(Order):
         return daypart_notes
 
 
-
     def page_with_spots(self):
         for dp in self.get_daypart_programs():
             if dp[1] in self.text:
@@ -185,16 +189,27 @@ class Page(Order):
             return True
         else:
             return False
+    @staticmethod
+    def get_flight_end_date(air_weeks):
+        last_week = air_weeks[-1]
+        month = int(last_week.split('/')[0])
+        day = int(last_week.split('/')[1])
+
+        dateObj = date(2018, month, day)
+        flight_end_date = dateObj + timedelta(days=6)
+        flight_end_date = flight_end_date.strftime('%m/%d')
+
+        return flight_end_date.strip('0').replace('/0', '/')
 ###
 
 class Line(Page):
     # instantiates an object "Line" for each line on every Page in the Order.
 
     num_of_lines = 0
-    def __init__(self, line_num,daypart_program, daypart_symbol, spot_rate, spot_dur, spot_count,daypart_note,text,call_letters,pdfReader): # do text and call letters need to be passed here and in the inheritance call below? (super)
-        super().__init__(self,text,call_letters,pdfReader)
+    def __init__(self, line_num,daypart_program, daypart_symbol, spot_rate, spot_dur, spot_count, daypart_note, page_num, text, call_letters): # do text and call letters need to be passed here and in the inheritance call below? (super)
+        super().__init__(page_num, text, call_letters)
         self.air_weeks = self.get_air_weeks()
-        self.get_hiatus_weeks = self.get_hiatus_weeks()
+        self.get_hiatus_weeks = self.get_hiatus_weeks(self.air_weeks)
         self.line_num = line_num
         self.daypart_program = daypart_program
         self.daypart_symbol = daypart_symbol
@@ -212,16 +227,7 @@ class Line(Page):
 
 
 
-def get_flight_end_date(air_weeks):
-    last_week = air_weeks[-1]
-    month = int(last_week.split('/')[0])
-    day = int(last_week.split('/')[1])
 
-    dateObj = date(2018, month, day)
-    flight_end_date = dateObj + timedelta(days=6)
-    flight_end_date = flight_end_date.strftime('%m/%d')
-
-    return flight_end_date.strip('0').replace('/0','/')
 
 
 
