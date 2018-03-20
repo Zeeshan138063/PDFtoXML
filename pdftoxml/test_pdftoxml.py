@@ -156,7 +156,8 @@ class TestLearn(unittest.TestCase):
         self.assertListEqual(expected_2, actual_2)
         self.assertListEqual(expected_3, actual_3)
 
-    def
+    def test_get_line_nums(self):
+        pass
 
 
 
