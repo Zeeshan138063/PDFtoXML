@@ -30,7 +30,7 @@ This eliminates the need to manually type in the order data by hand.
 	pdftoxml\\pdftoxml\\
 	
 - Run the following in the terminal:
-		$ python input.py
+		$ python pdftoxml.py
 		
 - The .xml files created will be saved to pdftoxml\\pdftoxml\\xml\\filename.xml
 
