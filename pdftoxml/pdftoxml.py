@@ -4,12 +4,15 @@ import re
 import textwrap
 import exemel_utils
 import pdf_parse
+from pathlib import Path
 
 
 def main():
+
     pdfFiles = []
     # for each pdf in the 'Orders' folder, add the filenames to a list pdfFiles.
-    for filename in os.listdir('.\\Orders\\'):
+    orders_path = Path("./Orders/")
+    for filename in os.listdir(orders_path):
         if filename.endswith('.pdf'):
             file_path = os.path.join("Orders",filename)
             pdfFiles.append(file_path)
@@ -94,7 +97,8 @@ def main():
         print("Flight: {}-{}\n".format(air_weeks[0], flight_end_date))
 
         exemel_utils.update_proposal_header(air_weeks,call_letters)
-        output_xml_file = '.\\xml\\{}_{}_{}_Proposal.xml'.format(est_num,call_letters,market_name)
+        xml_folder = Path('./xml/')
+        output_xml_file =  str(xml_folder / '{}_{}_{}_Proposal.xml'.format(est_num,call_letters,market_name))
         exemel_utils.write_to_proposal_xml(output_xml_file)
         exemel_utils.root.clear() # clears root of SubElements previously written
 

@@ -4,6 +4,7 @@ from lxml import etree as ET
 from datetime import time, date, timedelta, datetime
 from isoweek import Week
 import collections
+from pathlib import Path
 
 def parse_xml(root):
     for child in root.iter():
@@ -279,7 +280,7 @@ def create_radio_spot_order_header(line,air_weeks,hiatus_weeks): # for each orde
     # add Radio Spot Order code here
 '''
 
-def write_to_proposal_xml(output_xml_file=".\\xml\\proposal.xml"):
+def write_to_proposal_xml(output_xml_file):
     tree = ET.ElementTree(root)
     ET.register_namespace('tvb',"http://www.AAAA.org/schemas/spotTV")
     ET.register_namespace('tvb-tp',"http://www.AAAA.org/schemas/TVBGeneralTypes")
@@ -289,7 +290,7 @@ def write_to_proposal_xml(output_xml_file=".\\xml\\proposal.xml"):
 
 
 
-def write_to_radio_spot_order_xml(output_xml_file=".\\xml\\radio submission.xml"):
+def write_to_radio_spot_order_xml(output_xml_file):
     tree = ET.ElementTree(root)
     ET.register_namespace('tvb',"http://www.AAAA.org/schemas/spotTV")
     ET.register_namespace('tvb-tp',"http://www.AAAA.org/schemas/TVBGeneralTypes")
@@ -302,15 +303,16 @@ def write_to_radio_spot_order_xml(output_xml_file=".\\xml\\radio submission.xml"
 
 while True:
     template_file = input("Press 'R' to create a radio spot order xml file. \n or press 'P' to create a proposal xml file.\n> ")
-
+    templates_folder_string = Path('./xml/Templates/')
     if template_file.upper() == 'R':
-        template_file = os.path.join('xml\\Templates', 'radio spot order template.xml')
+
+        template_file = templates_folder_string / 'radio spot order template.xml'
         print('\nThis feature has not been set up yet. Program will produce a proposal xml.\n')
-        template_file = os.path.join('xml\\Templates', 'proposal template.xml')
+        template_file = templates_folder_string / 'proposal template.xml'
         break
 
     elif template_file.upper() == 'P':
-        template_file = os.path.join('xml\\Templates', 'proposal template.xml')
+        template_file = templates_folder_string / 'proposal template.xml'
         break
     else:
         print("\nIncorrect key command. Please try again...")
@@ -321,6 +323,7 @@ endDate = ''
 startDate = ''
 
 parser = ET.XMLParser(remove_blank_text=True)
+template_file = str(template_file)
 dom = ET.parse(template_file, parser)
 root = dom.getroot()
 

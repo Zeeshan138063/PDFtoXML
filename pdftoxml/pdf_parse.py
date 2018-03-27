@@ -5,6 +5,7 @@ import os
 import re
 import textwrap
 import exemel_utils
+from pathlib import Path
 
 
 class Order:
@@ -67,7 +68,9 @@ class Order:
         return match
 
     def __str__(self):
-        return self.file.split('Orders\\')[1].split('.pdf')[0]
+        order_folder_string = str(Path('//'))
+        split_1 = self.file.split(order_folder_string)[-1].split('.pdf')[0]
+        return split_1
 
 
 
