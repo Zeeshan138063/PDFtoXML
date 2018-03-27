@@ -11,8 +11,8 @@ def main():
 
     pdfFiles = []
     # for each pdf in the 'Orders' folder, add the filenames to a list pdfFiles.
-    orders_path = Path("./Orders/")
-    for filename in os.listdir(orders_path):
+    orders_path_string = str(Path("./Orders/"))
+    for filename in os.listdir(orders_path_string):
         if filename.endswith('.pdf'):
             file_path = os.path.join("Orders",filename)
             pdfFiles.append(file_path)

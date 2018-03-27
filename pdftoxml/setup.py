@@ -10,7 +10,7 @@ setup(
     url='',
     license='LICENSE.txt',
     description='A program for parsing order data from a pdf and converting it into xml, to be imported by VIEW.',
-    long_description=open('.\\README.txt').read(),
+    long_description=open('README.txt').read(),
     install_requires=[
         'isoweek==1.3.3',
         'pypdf2==1.26.0',
