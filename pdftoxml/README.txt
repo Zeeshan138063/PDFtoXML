@@ -14,7 +14,7 @@ This eliminates the need to manually type in the order data by hand.
 		Line.spot_rate = "60",
 		Line.daypart_program = " M 6:00a-10:00p
 
-- Uses the data stored in these variables to construct and save an XML Proposal File to .\\xml\\ 
+- Uses the data stored in these variables to construct and save an XML Proposal File to .\\xml\\
 
 
 ##Installation:
@@ -26,10 +26,10 @@ This eliminates the need to manually type in the order data by hand.
 
 - Navigate to:
 	pdftoxml\\pdftoxml\\
-	
+
 - Run the following in the terminal:
 		$ python pdftoxml.py
-		
+
 - The .xml files created will be saved to pdftoxml\\pdftoxml\\xml\\filename.xml
 
 -Thank y

@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='Order_Input',
-    version='1.0.0',
+    version='1.0.2',
     author='S. Kveton',
     author_email='kaveets24@gmail.com',
     packages=[''],
