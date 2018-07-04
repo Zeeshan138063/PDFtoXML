@@ -21,7 +21,7 @@
 			<RadioStation callLetters="KDGE" band="FM" outletId="OUT0"/>
 		</Outlets>
 		<AvailList startDate="2018-01-29" endDate="2018-05-13" identifier="AL001" isPackage="N">
-			<Name>Radio Schedule - Dallas-Ft. Worth 3BK Oct17-Dec17 MSA ARB PPM</Name>
+			<Name>Radio Schedule - Dallas-Ft. Worth 3BK Feb-Apr18 MSA ARB PPM</Name>
 			<OutletReferences>
 				<OutletReference outletFromProposalRef="OUT0" outletForListId="OUL0">
 					<Comment>

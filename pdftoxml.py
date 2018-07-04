@@ -64,11 +64,12 @@ def main():
                 exemel_utils.startDate = exemel_utils.get_startDate(air_weeks)
 
                 # For Debugging only
-                '''
-                print(current_page.get_daypart_symbols())
-                print(current_page.get_spot_rates())
-                print(current_page.get_spot_durs())
-                '''
+
+                # print(current_page.get_daypart_symbols())
+                # print(current_page.get_spot_rates())
+                # print(current_page.get_spot_durs())
+                print(current_page.get_daypart_programs())
+
                 #print(current_page.text)
 
 

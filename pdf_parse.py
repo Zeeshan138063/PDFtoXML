@@ -147,7 +147,7 @@ class Page(Order):
         return spot_rates
 
     def get_daypart_symbols(self):
-        matches = re.findall(r'(MD|AM|PM|T|RT)\n\$\d*,*\d{1,4}\.\d{2}', self.text)
+        matches = re.findall(r'(MD|AM|PM|T|RT|WK)\n\$\d*,*\d{1,4}\.\d{2}', self.text)
         symbols = []
         for m in matches:
             symbols.append(m[0:2].strip('\n'))
@@ -226,13 +226,3 @@ class Line(Page):
 
     def __str__(self):
         return self.line_num
-
-
-
-
-
-
-
-
-
-

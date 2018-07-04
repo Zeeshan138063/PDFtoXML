@@ -172,7 +172,7 @@ def get_revised_spot_count(air_weeks, spot_count, line_num):
 def create_xml_proposal_line(line,air_weeks,hiatus_weeks,market_name,file): #air_weeks, daypart_program, daypart_symbol, spot_rate, spot_dur, spot_count, daypart_note): # construct a new xml file from the template.xml file, which consists of ElementTree objects that contain nested elements representing spot_rate, daypart_program, daypart_symbol, spot_dur, spot_count
     startDate = get_startDate(air_weeks)
     endDate = get_endDate(air_weeks)
-    name = 'Radio Schedule - {} 3BK Oct17-Dec17 MSA ARB PPM'.format(market_name)
+    name = 'Radio Schedule - {} 3BK Feb18-Apr18 MSA ARB PPM'.format(market_name)
 
     for child in root.iter():
         if child.tag == '{http://www.AAAA.org/schemas/spotTVCableProposal}AvailList':
