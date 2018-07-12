@@ -16,12 +16,12 @@ This eliminates the need to manually type in the order data by hand.
 - Uses the data stored in these variables to construct and save an XML Proposal File to .\\xml\\ 
 
 
-##Installation:
+## Installation:
 - after cloning this repo, run the following within pdftoxml\pdftoxml\\ to install required third party python modules / dependencies:
 
 	$ pip install .
 
-##Directions:
+## Directions:
 
 - Navigate to:
 	pdftoxml\\pdftoxml\\
