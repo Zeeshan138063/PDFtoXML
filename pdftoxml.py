@@ -108,28 +108,6 @@ def main():
         exemel_utils.root = exemel_utils.dom.getroot()
 
     print("Process complete.")### The variable names / attributes of an object "Line" shown below are examples of the data that gets passed in as arguments to the create_exemel.create_xml_proposal_line() function.
-'''
-call_letters = 'KDGE-FM'
-air_weeks = ['1/29', '2/5', '2/12', '4/30', '5/7']
-
-line_nums = ['1', '2', '3', '4', '5', '6']
-daypart_programs = ['M  6:00a-10:00a', 'Tu  6:00a-10:00a', 'W  6:00a-10:00a', 'Th  6:00a-10:00a', 'F  6:00a-10:00a', 'MTuWThFSaSu  6:00a- 5:59a']
-daypart_symbols = ['AM', 'AM', 'AM', 'AM', 'AM', 'T']
-spot_rates = ['$310.00', '$310.00', '$310.00', '$310.00', '$310.00', '$205.88']
-spot_durs = ['60', '60', '60', '60', '60', '60']
-spot_counts = [['0', '1', '3', '0', '1'], ['0', '2', '1', '1', '2'], ['1', '2', '0', '1', '3'], ['1', '3', '0', '2', '3'], ['1', '3', '0', '2', '0'], ['1', '1', '1', '1', '1']]
-daypart_notes = ['Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart', 'Josh Hart Talent Fee']
-
-'''
-
-
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     main()
